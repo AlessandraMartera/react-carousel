@@ -10,13 +10,20 @@ footer{
 
 main{
   height: calc(100vh - 200px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 90px 0;
   overflow: scroll;
 }
 
+.centralContainer{
+  position: relative;
+  width: 40%;
+  margin: 10px auto;
+  display: flex;
+  /* align-items: center; */
+}
+
 .card{
+  margin: 0 auto;
   display: none;
   width: 600px;
   height: 400px;
@@ -31,6 +38,7 @@ main{
 }
 
 .button{
+  display: inline-block;
   margin: 0 10px;
   color: #ccc;
   background-color: darkslategrey;
@@ -38,6 +46,36 @@ main{
   padding: 10px;
 }
 
+.button.prev{
+  position: absolute;
+  left: -30px;
+  top: 50%;
+}
+
+.button.next{
+  position: absolute;
+  right: -30px;
+  top: 50%;
+}
+
 .active{
-  display: block;
+  display: inline-block;
+}
+
+.dotList{
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.dot{
+  display: inline-block;
+  margin: 0 3px;
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50px;
+}
+
+.dot.active{
+  background-color: #555;
 }
